@@ -62,8 +62,9 @@ def main():
     st.write("Enter an Amazon product URL to get detailed information about the product.")
     
     url = st.text_input("Enter Amazon Product URL:", placeholder="https://www.amazon.com/...")
+    submit_button = st.button("Scrape Product")
     
-    if url:
+    if submit_button and url:
         with st.spinner("Scraping product information..."):
             product_data = scrape_amazon(url)
             
